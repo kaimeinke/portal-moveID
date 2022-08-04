@@ -1,6 +1,6 @@
 {
-  "name": "@deltaDAO/mvg-portal",
-  "description": "Minimal Viable Gaia-X Portal demonstrator",
+  "name": "@deltaDAO/portal-moveID",
+  "description": "moveID Portal demonstrator",
   "version": "1.1.0",
   "license": "Apache-2.0",
   "homepage": "https://portal.minimal-gaia-x.eu",
