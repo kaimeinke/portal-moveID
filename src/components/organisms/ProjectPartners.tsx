@@ -3,7 +3,6 @@ import { graphql, useStaticQuery } from 'gatsby'
 import styles from './ProjectPartners.module.css'
 import Carousel from './Carousel'
 import Container from '../atoms/Container'
-import LinkOpener from '../molecules/LinkOpener'
 import Img, { FluidObject } from 'gatsby-image'
 
 const query = graphql`
@@ -41,7 +40,7 @@ export default function ProjectPartners(): ReactElement {
   return (
     <div className={styles.wrapper}>
       <Container className={styles.container}>
-        <h3 className={styles.title}>These partners work with us</h3>
+        <h3 className={styles.title}>Project Partners</h3>
         <Carousel show={4}>
           {logos.map((logo) => (
             <div

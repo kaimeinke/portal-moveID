@@ -23,23 +23,25 @@ export default function PageHeader({
   })
 
   return (
-    <header className={styleClasses}>
-      <h1 className={styles.title}>{title}</h1>
-      {description && (
-        <Markdown text={description} className={styles.description} />
-      )}
-      {powered && (
-        <>
-          <p className={styles.powered}>powered by</p>
-          <a
-            href="https://oceanprotocol.com/"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <Logo />
-          </a>
-        </>
-      )}
-    </header>
+    <div className={styles.wrapper}>
+      <header className={styleClasses}>
+        <h1 className={styles.title}>{title}</h1>
+        {description && (
+          <Markdown text={description} className={styles.description} />
+        )}
+        {powered && (
+          <>
+            <p className={styles.powered}>powered by</p>
+            <a
+              href="https://oceanprotocol.com/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <Logo />
+            </a>
+          </>
+        )}
+      </header>
+    </div>
   )
 }
