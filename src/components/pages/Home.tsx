@@ -283,10 +283,6 @@ export default function HomePage(): ReactElement {
             All data sets and algorithms
           </Button>
         </Container>
-
-        <section className={styles.intro}>
-          <HomeIntro />
-        </section>
         <section className={styles.content}>
           <HomeContent />´
         </section>

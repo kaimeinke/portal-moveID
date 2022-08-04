@@ -1,23 +1,19 @@
 {
   "content": {
     "teaser": {
-      "title": "Gaia-X: Data Sovereignty for Europe",
-      "text": "Gaia-X represents the next generation of data infrastructure: an **open, transparent and secure digital ecosystem**, where data and services can be made available, collated and shared in an environment of trust. The architecture of Gaia-X is based on the principle of decentralisation."
+      "title": "GAIA-X4FutureMobility Cluster: Project moveID",
+      "text": "Deployment of decentralized mobility data spaces and self-sovereign identity technologies in smart vehicles and traffic solutions."
     },
     "paragraphs": [
       {
-        "title": "A Minimal Viable Gaia-X on DLT",
-        "body": "The principle of decentralization is a perfect fit for **Distributed Ledger Technology**. [Ocean Protocol](https://oceanprotocol.com) is a fully open-source technology stack, leveraging DLT and decentralization, aiming to give control back to the owners of data services. This MVG demonstrator is built on top of Ocean Protocol showcasing how a Minimal Viable Gaia-X on DLT and Ocean Protocol can look like, already today.",
-        "cta": "Learn More",
-        "ctaTo": "https://www.youtube.com/watch?v=R49CXPTRamg",
-        "image": "../../../src/images/ctd_benefits.png"
+        "title": "Use cases",
+        "body": "- Intelligent mobility infrastructure management: V2X / digital upgrading of vehicle/infrastructure components\n- Zoning: setting up and enforcing spatial access restrictions, e.g. urban environmental zones\n- Smart Parking: Search & pay-as-you-go of parking/charging infrastructure - across providers\n- Vehicle Data Collection: Vehicle as a data hub for detecting road conditions and vehicle component status\n- Non-discriminatory access to digital services in a closely networked European infrastructure\n- Preservation of autonomy with regard to private data and improvement of security and trustworthiness in a future Internet of Things\n- Achieving or restoring a fair market economy in the area of digital data business models\n- Avoidance of asymmetric data and information flows by hyperscalers entering the European market such as Amazon, Google, etc. or the BAT Group (Baidu, AliBaba, Tencent)",
+        "image": "../../../src/images/moveID-use-cases.jpg"
       },
       {
-        "title": "Compute-to-Data and its benefits",
-        "body": "One core concept of Ocean Protocol is the **Compute-to-Data (CtD)** approach. Compute-to-Data is the functionality that solves the current trade-off between the benefits of using private data and the risks of exposing it. It allows data consumers to run compute jobs on private data while the data stays on-premise with the data provider.",
-        "cta": "Learn More",
-        "ctaTo": "https://www.youtube.com/watch?v=R49CXPTRamg",
-        "image": "../../../src/images/ctd_benefits.png"
+        "title": "Decentralization at its best",
+        "body": "The required decentralization is based on Distributed Ledger Technologies (DLT), which is linked to the vehicle's digital identity (Decentralized ID - DID, at device or subject level). Thus, highest security/privacy and contextless operator architectures are possible. Use cases such as decentralized charging infrastructures or access control (zoning) will prevent closed ecosystems with lock-in effects and high windfall profits through monopolistic platform intermediaries - the focus here is on open source and interoperability (open APIs).",
+        "image": "../../../src/images/moveID-vehicle-data-sharing.jpg"
       }
     ]
   }

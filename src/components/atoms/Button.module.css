@@ -54,7 +54,7 @@
 .primary:hover,
 .primary:focus,
 .primary:active {
-  background: var(--brand-black);
+  background: var(--color-menu-active);
 }
 
 .ghost,

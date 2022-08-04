@@ -17,4 +17,5 @@
 .section [class*='button'],
 .allAssetsButton {
   margin-top: var(--spacer);
+  color: var(--color-secondary);
 }

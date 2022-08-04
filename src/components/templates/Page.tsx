@@ -29,6 +29,7 @@ export default function Page({
           title={title}
           description={description}
           center={headerCenter}
+          isHome={isHome}
         />
       )}
       {children}

@@ -1,11 +1,21 @@
-.wrapper {
-  padding: calc(var(--spacer) * 4) 0;
+.isHome {
+  padding: calc(var(--spacer) * 3) 0;
   background-image: var(--hero-gradient);
 }
 
+.isHome .title,
+.isHome .description {
+  color: var(--brand-white);
+}
+
 .header {
+  margin-top: calc(var(--spacer) * 1.5);
   margin-bottom: var(--spacer);
   max-width: 50rem;
+}
+
+.isHome .header {
+  margin-top: 0;
 }
 
 .title {
