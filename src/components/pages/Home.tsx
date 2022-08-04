@@ -280,13 +280,7 @@ export default function HomePage(): ReactElement {
             All data sets and algorithms
           </Button>
         </Container>
-        <Container>
-          <div>
-            {banners?.map((banner, i) => (
-              <PromotionBanner {...banner} key={i} />
-            ))}
-          </div>
-        </Container>
+
         <section className={styles.intro}>
           <HomeIntro />
         </section>

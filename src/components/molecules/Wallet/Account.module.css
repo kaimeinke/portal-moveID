@@ -6,7 +6,7 @@
   border: none;
   padding: calc(var(--spacer) / 6) var(--spacer);
   white-space: nowrap;
-  background: var(--background-content);
+  background: var(--color-primary);
   margin: 0;
   transition: border 0.2s ease-out;
   cursor: pointer;
@@ -17,7 +17,7 @@
 
 .button,
 .address {
-  color: var(--color-primary);
+  color: var(--brand-white);
   z-index: 1;
 }
 
@@ -32,29 +32,6 @@
   transform: none;
   outline: 0;
   color: var(--brand-white);
-}
-
-.button:before,
-.button:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.button:before {
-  transform: scaleX(0);
-  transform-origin: 0 50%;
-  background-color: var(--color-primary);
-  transition: transform 0.2s;
-  z-index: -1;
-}
-
-.button:hover:before,
-.button:focus:before {
-  transform: scaleX(1);
 }
 
 .button:after {
@@ -78,7 +55,6 @@
 .address {
   display: none;
   text-transform: none;
-  border-right: 2px solid var(--border-color-menu);
   padding-right: calc(var(--spacer) / 3);
   padding-left: calc(var(--spacer) / 8);
 }
@@ -96,7 +72,7 @@
 .button svg {
   width: 1em;
   height: 1em;
-  fill: var(--border-color);
+  fill: var(--brand-white);
   display: inline-block;
   vertical-align: middle;
   margin-left: calc(var(--spacer) / 3);
@@ -122,7 +98,7 @@ svg.caret {
   .caret,
   svg.caret {
     display: inline-block;
-    fill: var(--color-primary);
+    fill: var(--brand-white);
   }
 
   .button:hover .caret,
