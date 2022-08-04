@@ -25,6 +25,7 @@
   /* Only use these vars for most color referencing for easy light/dark mode */
   --font-color-text: var(--brand-grey);
   --font-color-heading: var(--brand-black);
+  --logo-fill-color: var(--brand-black);
   --background-body: var(--brand-white);
   --background-content: var(--brand-white);
   --background-body-transparent: rgba(255, 255, 255, 0.85);
