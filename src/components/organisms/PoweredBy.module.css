@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: calc(var(--spacer) * 2);
+}
+
+.container p {
+  margin-bottom: calc(var(--spacer) / 2);
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: calc(var(--spacer) / 2);
+}
+
+.logo {
+  width: 5rem;
+}

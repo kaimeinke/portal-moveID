@@ -20,7 +20,7 @@
 .content a:focus,
 .content button:hover,
 .content button:focus {
-  color: var(--color-primary);
+  color: var(--brand-pink);
 }
 
 .content p {

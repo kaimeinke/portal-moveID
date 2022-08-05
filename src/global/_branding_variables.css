@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&display=swap');
 
 :root {
-  --brand-pink: #46daff;
+  --brand-pink: #05b050;
   --brand-purple: #7300f3;
   --brand-violet: #b900ff;
   --brand-cyan: #00ffff;
-
   --brand-black: #000046;
 
   --color-primary: #000094;
@@ -14,6 +13,14 @@
   --border-color-menu: var(--color-primary);
   --border-radius-menu: 2px;
 
+  --hero-gradient: linear-gradient(
+    120deg,
+    #961cd4,
+    #5700b9 26%,
+    #1110c4 50%,
+    #2f56ff 71%,
+    #40b6ff 98%
+  );
   --brand-gradient: linear-gradient(
     to right bottom,
     var(--color-primary),

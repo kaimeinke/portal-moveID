@@ -29,7 +29,7 @@ export default function Page({
           title={title}
           description={description}
           center={headerCenter}
-          powered={isHome}
+          isHome={isHome}
         />
       )}
       {children}

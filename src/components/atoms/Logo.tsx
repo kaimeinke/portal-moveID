@@ -20,7 +20,9 @@ export default function Logo({
   })
 
   return branding ? (
-    <LogoAssetBranding className={styleClasses} />
+    // <LogoAssetBranding className={styleClasses} />
+    // TODO replace with logo
+    <h4 style={{ margin: 0, color: 'var(--color-primary)' }}>moveID</h4>
   ) : noWordmark ? (
     <LogoAsset className={styleClasses} />
   ) : (

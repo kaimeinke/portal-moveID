@@ -34,6 +34,9 @@ import { useWeb3 } from '../../providers/Web3'
 import SectionTitle from '../molecules/SectionTitle'
 import PromotionBanner from '../molecules/PromotionBanner'
 import { graphql, useStaticQuery } from 'gatsby'
+import ProjectPartners from '../organisms/ProjectPartners'
+import FundedBy from '../organisms/FundedBy'
+import PoweredBy from '../organisms/PoweredBy'
 
 function sortElements(items: DDO[], sorted: string[]) {
   items.sort(function (a, b) {
@@ -280,18 +283,13 @@ export default function HomePage(): ReactElement {
             All data sets and algorithms
           </Button>
         </Container>
-        <Container>
-          <div>
-            {banners?.map((banner, i) => (
-              <PromotionBanner {...banner} key={i} />
-            ))}
-          </div>
-        </Container>
-        <section className={styles.intro}>
-          <HomeIntro />
-        </section>
         <section className={styles.content}>
           <HomeContent />´
+        </section>
+        <section>
+          <ProjectPartners />
+          <FundedBy />
+          <PoweredBy />
         </section>
       </>
     </Permission>
