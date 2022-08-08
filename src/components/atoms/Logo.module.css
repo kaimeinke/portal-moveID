@@ -5,7 +5,7 @@
 }
 
 .branding {
-  width: 5rem;
+  width: 15rem;
   height: auto;
 }
 
@@ -16,10 +16,4 @@ a > .logo:hover path {
 
 .branding path {
   fill: var(--color-primary);
-}
-
-@media screen and (min-width: 55rem) {
-  .branding {
-    width: 7.5rem;
-  }
 }
