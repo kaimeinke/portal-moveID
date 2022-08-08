@@ -4,8 +4,40 @@ import { ReactComponent as LogoAssetBranding } from '../../images/gaia-x-logo.sv
 import { ReactComponent as LogoAsset } from '../../images/ocean-logo.svg'
 import styles from './Logo.module.css'
 import classNames from 'classnames/bind'
+import { graphql, useStaticQuery } from 'gatsby'
+import Img, { FluidObject } from 'gatsby-image'
 
 const cx = classNames.bind(styles)
+
+const query = graphql`
+  query {
+    logo: allFile(filter: { relativePath: { eq: "moveID-logo.png" } }) {
+      edges {
+        node {
+          childImageSharp {
+            original {
+              src
+            }
+          }
+        }
+      }
+    }
+  }
+`
+
+interface Logo {
+  logo: {
+    edges: {
+      node: {
+        childImageSharp: {
+          original: {
+            src: string
+          }
+        }
+      }
+    }[]
+  }
+}
 
 export default function Logo({
   noWordmark,
@@ -14,15 +46,20 @@ export default function Logo({
   noWordmark?: boolean
   branding?: boolean
 }): ReactElement {
+  const data: Logo = useStaticQuery(query)
+  const { logo } = data
+
   const styleClasses = cx({
     logo: true,
     branding: branding
   })
 
   return branding ? (
-    // <LogoAssetBranding className={styleClasses} />
-    // TODO replace with logo
-    <h4 style={{ margin: 0, color: 'var(--color-primary)' }}>moveID</h4>
+    <img
+      src={logo.edges[0].node.childImageSharp.original.src}
+      alt="moveID logo"
+      className={styleClasses}
+    />
   ) : noWordmark ? (
     <LogoAsset className={styleClasses} />
   ) : (
