@@ -5,15 +5,11 @@
 }
 
 .branding {
-  width: 15rem;
+  width: 10rem;
   height: auto;
 }
 
 .logo path,
 a > .logo:hover path {
   fill: var(--logo-fill-color);
-}
-
-.branding path {
-  fill: var(--color-primary);
 }
