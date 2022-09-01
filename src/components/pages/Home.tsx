@@ -25,14 +25,12 @@ import {
 } from '../../models/SortAndFilters'
 import { BaseQueryParams } from '../../models/aquarius/BaseQueryParams'
 import { PagedAssets } from '../../models/PagedAssets'
-import HomeIntro from '../organisms/HomeIntro'
 import HomeContent from '../organisms/HomeContent'
 import Container from '../atoms/Container'
 import { useAddressConfig } from '../../hooks/useAddressConfig'
 import OnboardingSection from './Home/Onboarding'
 import { useWeb3 } from '../../providers/Web3'
 import SectionTitle from '../molecules/SectionTitle'
-import PromotionBanner from '../molecules/PromotionBanner'
 import { graphql, useStaticQuery } from 'gatsby'
 import ProjectPartners from '../organisms/ProjectPartners'
 import FundedBy from '../organisms/FundedBy'
@@ -187,9 +185,7 @@ export default function HomePage(): ReactElement {
   const { accountId, balance, balanceLoading, chainId, web3Loading } = useWeb3()
   const [showOnboarding, setShowOnboarding] = useState(false)
   const data: HomeContent = useStaticQuery(homePageContentQuery)
-  const { content, featuredAssets } = data
-
-  const { banners } = content.edges[0].node.childContentJson
+  const { featuredAssets } = data
 
   useLayoutEffect(() => {
     const { eth, ocean } = balance
@@ -284,7 +280,7 @@ export default function HomePage(): ReactElement {
           </Button>
         </Container>
         <section className={styles.content}>
-          <HomeContent />´
+          <HomeContent />
         </section>
         <section>
           <ProjectPartners />
