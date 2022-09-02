@@ -136,6 +136,7 @@ export default function HomeContent(): ReactElement {
                 <a
                   className={styles.social}
                   href={social.target}
+                  target="_blank"
                   rel="noopener noreferrer"
                 >
                   {iconMap[social.icon]}
