@@ -1,0 +1,32 @@
+.wrapper {
+  margin: calc(var(--spacer) / 2) 0;
+  padding: calc(var(--spacer) * 2) 0;
+  background-color: var(--color-primary);
+}
+
+.title {
+  color: var(--brand-white);
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  max-height: 8rem;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+}
+
+.footer a {
+  color: var(--brand-white);
+}
+
+.footer a:hover {
+  transition: none;
+  color: var(--brand-white);
+  font-weight: var(--font-weight-bold);
+}

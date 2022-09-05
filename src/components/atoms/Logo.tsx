@@ -1,11 +1,8 @@
 import React, { ReactElement } from 'react'
 import { ReactComponent as LogoAssetFull } from '@oceanprotocol/art/logo/logo.svg'
-import { ReactComponent as LogoAssetBranding } from '../../images/gaia-x-logo.svg'
+import { ReactComponent as LogoAssetBranding } from '../../images/moveID-logo.svg'
 import { ReactComponent as LogoAsset } from '../../images/ocean-logo.svg'
 import styles from './Logo.module.css'
-import classNames from 'classnames/bind'
-
-const cx = classNames.bind(styles)
 
 export default function Logo({
   noWordmark,
@@ -14,16 +11,11 @@ export default function Logo({
   noWordmark?: boolean
   branding?: boolean
 }): ReactElement {
-  const styleClasses = cx({
-    logo: true,
-    branding: branding
-  })
-
   return branding ? (
-    <LogoAssetBranding className={styleClasses} />
+    <LogoAssetBranding className={styles.branding} />
   ) : noWordmark ? (
-    <LogoAsset className={styleClasses} />
+    <LogoAsset className={styles.logo} />
   ) : (
-    <LogoAssetFull className={styleClasses} />
+    <LogoAssetFull className={styles.logo} />
   )
 }

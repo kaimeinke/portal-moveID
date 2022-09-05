@@ -44,6 +44,7 @@ const query = graphql`
               disclaimerValues
             }
             warning
+            walletDisclaimer
           }
         }
       }
@@ -169,6 +170,7 @@ export default function FormPublish({
       <FormActions
         isValid={isValid}
         resetFormAndClearStorage={resetFormAndClearStorage}
+        walletDisclaimer={content.walletDisclaimer}
       />
     </Form>
   )

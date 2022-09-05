@@ -49,14 +49,12 @@
 
 .primary {
   background: var(--color-primary);
-  box-shadow: 3px 3px 0 0 var(--brand-cyan);
 }
 
 .primary:hover,
 .primary:focus,
 .primary:active {
-  transform: translate(1px, 1px);
-  box-shadow: 1px 1px 0 0 var(--brand-cyan);
+  background: var(--color-menu-active);
 }
 
 .ghost,
