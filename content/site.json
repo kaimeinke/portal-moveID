@@ -1,7 +1,7 @@
 {
   "site": {
-    "siteTitle": "moveID Portal Demonstrator",
-    "siteTagline": " Decentralized digital vehicle identities in a highly networked and smart traffic environment.",
+    "siteTitle": "moveID Gaia-X Portal",
+    "siteTagline": " moveID aims to develop a decentralized digital mobility identity infrastructure for Europe.",
     "siteUrl": "https://moveid.portal.minimal-gaia-x.eu",
     "siteIcon": "./src/images/siteIcon.png",
     "siteImage": "../src/images/share.png",

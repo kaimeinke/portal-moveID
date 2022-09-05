@@ -3,19 +3,6 @@
   margin-top: calc(var(--spacer) * 5);
 }
 
-@media screen and (min-width: 54rem) {
-  .paragraph {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .paragraph.mirror {
-    flex-direction: row-reverse;
-    text-align: left;
-  }
-}
-
 .teaser {
   margin-bottom: calc(var(--spacer) * 2);
   text-align: center;
@@ -31,19 +18,71 @@
   margin: auto;
 }
 
-.content {
-  padding: var(--spacer);
-  padding-right: 0;
+.contentFooter {
+  margin: calc(var(--spacer) * 2) auto;
+  text-align: center;
 }
 
-.mirror .content {
-  padding: var(--spacer);
-  padding-left: 0;
+.iconsContainer {
+  display: flex;
+  gap: var(--spacer);
+  justify-content: center;
+  margin: 0 auto;
 }
 
-.content button,
-.content a[class*='button'] {
-  display: block;
-  margin: var(--spacer) auto;
-  margin-right: auto;
+.socialContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+.social {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: calc(var(--spacer) / 2);
+  color: var(--font-color-text);
+  font-size: var(--font-size-large);
+}
+
+.social svg {
+  width: 3rem;
+  margin: 0;
+}
+
+.social path {
+  fill: var(--font-color-text);
+}
+
+.social:hover,
+.social:hover path {
+  color: var(--brand-pink);
+  fill: var(--brand-pink);
+  transition: all 0.3s ease;
+}
+
+@media screen and (min-width: 54rem) {
+  .paragraph {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .paragraph.mirror {
+    flex-direction: row-reverse;
+    text-align: left;
+  }
+  .content {
+    padding: var(--spacer);
+    padding-right: 0;
+  }
+  .mirror .content {
+    padding: var(--spacer);
+    padding-left: 0;
+  }
+  .iconsContainer {
+    max-width: 60rem;
+    grid-template-columns: repeat(3, minmax(10rem, 1fr));
+  }
 }

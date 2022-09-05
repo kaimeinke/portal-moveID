@@ -6,6 +6,9 @@ import classNames from 'classnames/bind'
 import Button from '../atoms/Button'
 import Container from '../atoms/Container'
 import InteractiveModalImage from '../molecules/InteractiveModalImage'
+import { ReactComponent as IconBlog } from '../../images/social_blog.svg'
+import { ReactComponent as IconTwitter } from '../../images/social_twitter.svg'
+import { ReactComponent as IconLinkedIn } from '../../images/social_linkedin.svg'
 
 const cx = classNames.bind(styles)
 
@@ -29,11 +32,27 @@ const query = graphql`
             }
           }
         }
+        footer {
+          title
+          text
+          socials {
+            icon
+            label
+            target
+          }
+        }
       }
     }
   }
 }
 `
+
+interface SocialParams {
+  icon: keyof typeof iconMap
+  label: string
+  target: string
+}
+
 interface HomeContentData {
   file: {
     childIndexJson: {
@@ -49,14 +68,25 @@ interface HomeContentData {
           ctaTo?: string
           image: { childImageSharp: { original: { src: string } } }
         }[]
+        footer: {
+          title: string
+          text: string
+          socials: SocialParams[]
+        }
       }
     }
   }
 }
 
+const iconMap = {
+  blog: <IconBlog />,
+  twitter: <IconTwitter />,
+  linkedin: <IconLinkedIn />
+}
+
 export default function HomeContent(): ReactElement {
   const data: HomeContentData = useStaticQuery(query)
-  const { paragraphs, teaser } = data.file.childIndexJson.content
+  const { paragraphs, teaser, footer } = data.file.childIndexJson.content
 
   return (
     <Container>
@@ -97,6 +127,25 @@ export default function HomeContent(): ReactElement {
               </div>
             </div>
           ))}
+        </div>
+        <div className={styles.contentFooter}>
+          <h2>{footer.title}</h2>
+          <div className={styles.iconsContainer}>
+            {footer.socials.map((social: SocialParams) => (
+              <div key={social.label} className={styles.socialContainer}>
+                <a
+                  className={styles.social}
+                  href={social.target}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {iconMap[social.icon]}
+                  <span>{social.label}</span>
+                </a>
+              </div>
+            ))}
+          </div>
+          <Markdown text={footer.text} />
         </div>
       </div>
     </Container>
