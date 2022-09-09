@@ -8,8 +8,12 @@
     "copyright": "All Rights Reserved. Powered by [Ocean Protocol](https://oceanprotocol.com). Built by [deltaDAO](https://delta-dao.com).",
     "menu": [
       {
-        "name": "Profile",
-        "link": "/profile"
+        "name": "Catalogue",
+        "link": "/search?sort=_score&sortOrder=desc&text="
+      },
+      {
+        "name": "Publish",
+        "link": "/publish"
       }
     ],
     "warning": {

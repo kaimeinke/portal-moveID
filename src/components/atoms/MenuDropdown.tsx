@@ -4,6 +4,7 @@ import styles from './MenuDropdown.module.css'
 import { ReactComponent as Caret } from '../../images/caret.svg'
 import LinkOpener from '../molecules/LinkOpener'
 import classNames from 'classnames/bind'
+import { MenuLink } from '../molecules/Menu'
 
 const cx = classNames.bind(styles)
 
@@ -46,9 +47,7 @@ export default function MenuDropdown({
                 {subItems && subItems.length > 0 ? (
                   <MenuDropdown label={name} items={subItems} />
                 ) : (
-                  <LinkOpener uri={link} className={styles.link}>
-                    {name}
-                  </LinkOpener>
+                  <MenuLink name={name} link={link} />
                 )}
               </li>
             )
@@ -56,7 +55,7 @@ export default function MenuDropdown({
         </ul>
       }
       placement="bottom"
-      trigger="focus | click"
+      trigger="click focus mouseenter"
     >
       <ItemLabel name={label} />
     </Tooltip>
