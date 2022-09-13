@@ -10,10 +10,6 @@
       {
         "name": "Catalogue",
         "link": "/search?sort=_score&sortOrder=desc&text="
-      },
-      {
-        "name": "Publish",
-        "link": "/publish"
       }
     ],
     "warning": {
