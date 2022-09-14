@@ -10,6 +10,18 @@
       {
         "name": "Catalogue",
         "link": "/search?sort=_score&sortOrder=desc&text="
+      },
+      {
+        "name": "Ecosystem",
+        "subItems": [
+          {
+            "name": "Minimal Viable Gaia-X",
+            "link": "https://portal.minimal-gaia-x.eu"
+          },
+          {
+            "name": "Your project here"
+          }
+        ]
       }
     ],
     "warning": {
