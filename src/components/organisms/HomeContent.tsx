@@ -34,7 +34,6 @@ const query = graphql`
         }
         footer {
           title
-          text
           socials {
             icon
             label
@@ -70,7 +69,6 @@ interface HomeContentData {
         }[]
         footer: {
           title: string
-          text: string
           socials: SocialParams[]
         }
       }
@@ -145,7 +143,6 @@ export default function HomeContent(): ReactElement {
               </div>
             ))}
           </div>
-          <Markdown text={footer.text} />
         </div>
       </div>
     </Container>

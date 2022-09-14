@@ -7,13 +7,8 @@
     "paragraphs": [
       {
         "title": "Use cases",
-        "body": "- Intelligent mobility infrastructure management: V2X / digital upgrading of vehicle/infrastructure components\n- Zoning: setting up and enforcing spatial access restrictions, e.g. urban environmental zones\n- Smart Parking: Search & pay-as-you-go of parking/charging infrastructure - across providers\n- Vehicle Data Collection: Vehicle as a data hub for detecting road conditions and vehicle component status\n- Non-discriminatory access to digital services in a closely networked European infrastructure\n- Preservation of autonomy with regard to private data and improvement of security and trustworthiness in a future Internet of Things\n- Achieving or restoring a fair market economy in the area of digital data business models\n- Avoidance of asymmetric data and information flows by hyperscalers entering the European market such as Amazon, Google, etc. or the BAT Group (Baidu, AliBaba, Tencent)",
+        "body": "- **Intelligent mobility infrastructure management**: V2X / digital upgrading of vehicle/infrastructure components\n- **Zoning**: setting up and enforcing spatial access restrictions, e.g. urban environmental zones\n- **Smart Parking**: Search & pay-as-you-go of parking/charging infrastructure - across providers\n- **Vehicle Data Collection**: Vehicle as a data hub for detecting road conditions and vehicle component status\n- **Non-discriminatory access** to digital services in a closely networked European infrastructure\n- **Preservation of autonomy** with regard to private data and improvement of security and trustworthiness in a future Internet of Things\n- Achieving or restoring a **fair market economy** in the area of digital data business models",
         "image": "../../../src/images/moveID-use-cases.jpg"
-      },
-      {
-        "title": "Decentralization at its best",
-        "body": "The required decentralization is based on Distributed Ledger Technologies (DLT), which is linked to the vehicle's digital identity (Decentralized ID - DID, at device or subject level). Thus, highest security/privacy and contextless operator architectures are possible. Use cases such as decentralized charging infrastructures or access control (zoning) will prevent closed ecosystems with lock-in effects and high windfall profits through monopolistic platform intermediaries - the focus here is on open source and interoperability (open APIs).",
-        "image": "../../../src/images/moveID-vehicle-data-sharing.jpg"
       },
       {
         "title": "About",
@@ -23,7 +18,6 @@
     ],
     "footer": {
       "title": "Join us!",
-      "text": "Through our channels we will inform you about our work in moveID, one of five projects within the 4 Future Mobility family.\n\nYou're invited to join the conversation to learn, discuss, ideate, and have fun with us! We explain how we aim to develop a **decentralized digital identity infrastructure for mobility** in Europe!",
       "socials": [
         {
           "icon": "blog",
