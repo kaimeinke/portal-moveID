@@ -9,6 +9,7 @@ const query = graphql`
   {
     allFile(
       filter: { absolutePath: { regex: "/src/images/projectPartners/" } }
+      sort: { fields: [base] }
     ) {
       edges {
         node {
