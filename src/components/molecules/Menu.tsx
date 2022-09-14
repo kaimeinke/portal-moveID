@@ -4,7 +4,6 @@ import { useLocation } from '@reach/router'
 import loadable from '@loadable/component'
 import styles from './Menu.module.css'
 import { useSiteMetadata } from '../../hooks/useSiteMetadata'
-import UserPreferences from './UserPreferences'
 import Logo from '../atoms/Logo'
 import Networks from './UserPreferences/Networks'
 import SearchBar from './SearchBar'
@@ -22,21 +21,24 @@ export function MenuLink({
   className
 }: {
   name: string
-  link: string
+  link?: string
   className?: string
 }): ReactElement {
   const location = useLocation()
 
   const basePath = location?.pathname.split(/[/?]/)[1]
-  const baseLink = link.split(/[/?]/)[1]
+  const baseLink = link?.split(/[/?]/)[1]
 
   const classes = cx({
-    link: true,
-    active: link.startsWith('/') && basePath === baseLink,
+    link,
+    active: link?.startsWith('/') && basePath === baseLink,
+    textOnly: !link,
     [className]: className
   })
 
-  return link.startsWith('/') ? (
+  return !link ? (
+    <span className={classes}>{name}</span>
+  ) : link.startsWith('/') ? (
     <Link key={name} to={link} className={classes}>
       {name}
     </Link>
