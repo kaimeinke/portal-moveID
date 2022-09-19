@@ -12,6 +12,10 @@
         "link": "/search?sort=_score&sortOrder=desc&text="
       },
       {
+        "name": "Verify",
+        "link": "/verify"
+      },
+      {
         "name": "Ecosystem",
         "subItems": [
           {
