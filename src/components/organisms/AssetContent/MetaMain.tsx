@@ -16,6 +16,7 @@ export default function MetaMain(): ReactElement {
     type,
     isAssetNetwork,
     isServiceSelfDescriptionVerified,
+    serviceSDVersion,
     isVerifyingSD,
     verifiedServiceProviderName
   } = useAsset()
@@ -65,7 +66,9 @@ export default function MetaMain(): ReactElement {
           Published By{' '}
           <Publisher
             account={owner}
-            verifiedServiceProviderName={verifiedServiceProviderName}
+            verifiedServiceProviderName={
+              isServiceSelfDescriptionVerified && verifiedServiceProviderName
+            }
           />
           <p>
             <Time date={ddo?.created} relative />
@@ -83,6 +86,7 @@ export default function MetaMain(): ReactElement {
           <VerifiedBadge
             text="Service Self-Description"
             isLoading={isVerifyingSD}
+            apiVersion={serviceSDVersion}
             timestamp={isServiceSelfDescriptionVerified}
           />
         )}
