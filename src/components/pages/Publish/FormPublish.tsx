@@ -10,7 +10,7 @@ import { useFormikContext, Field, Form, FormikContextType } from 'formik'
 import Input from '../../atoms/Input'
 import { FormContent, FormFieldProps } from '../../../@types/Form'
 import { MetadataPublishFormDataset } from '../../../@types/MetaData'
-import { initialValues as initialValuesDataset } from '../../../models/FormAlgoPublish'
+import { initialValues as initialValuesDataset } from '../../../models/FormPublish'
 import { ReactComponent as Download } from '../../../images/download.svg'
 import { ReactComponent as Compute } from '../../../images/compute.svg'
 import FormTitle from './FormTitle'
@@ -85,11 +85,13 @@ export default function FormPublish({
   const accessTypeOptions = [
     {
       name: 'Download',
+      checked: false,
       title: 'Download',
       icon: <Download />
     },
     {
       name: 'Compute',
+      checked: false,
       title: 'Compute',
       icon: <Compute />
     }
@@ -106,7 +108,9 @@ export default function FormPublish({
     field: FormFieldProps
   ) {
     const value =
-      field.type === 'terms' ? !JSON.parse(e.target.value) : e.target.value
+      field.type === 'checkbox' || field.type === 'terms'
+        ? !JSON.parse(e.target.value)
+        : e.target.value
 
     if (field.name === 'access' && value === 'Compute') {
       setComputeTypeSelected(true)
@@ -159,6 +163,7 @@ export default function FormPublish({
               onChange={(e: ChangeEvent<HTMLInputElement>) =>
                 handleFieldChange(e, field)
               }
+              setStatus={setStatus}
             />
           )
       )}
@@ -168,6 +173,7 @@ export default function FormPublish({
       />
 
       <FormActions
+        status={status}
         isValid={isValid}
         resetFormAndClearStorage={resetFormAndClearStorage}
         walletDisclaimer={content.walletDisclaimer}
