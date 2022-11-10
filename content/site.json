@@ -1,7 +1,7 @@
 {
   "site": {
     "siteTitle": "moveID Gaia-X Portal",
-    "siteTagline": " moveID aims to develop a decentralized digital mobility identity infrastructure for Europe.",
+    "siteTagline": "moveID aims to develop a decentralized digital mobility identity infrastructure for Europe.",
     "siteUrl": "https://moveid.portal.minimal-gaia-x.eu",
     "siteIcon": "./src/images/siteIcon.png",
     "siteImage": "../src/images/share.png",
@@ -23,7 +23,7 @@
             "link": "https://portal.minimal-gaia-x.eu"
           },
           {
-            "name": "FMDM",
+            "name": "Future Mobility",
             "link": "https://marketplace.future-mobility-alliance.org/"
           },
           {
