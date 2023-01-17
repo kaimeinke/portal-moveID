@@ -1,25 +1,21 @@
 #!/usr/bin/env node
 'use strict'
 
-const execSync = require('child_process').execSync
+const axios = require('axios')
+const { networksMetadata } = require('../networksMetadata.config')
+const { GEN_X_NETWORK_ID } = require('../chains.config')
 
-//
-// VERCEL_GITHUB_COMMIT_REF & VERCEL_GITHUB_COMMIT_SHA need to be added with empty
-// values in Vercel environment variables, making them available to builds.
-// https://vercel.com/docs/build-step#system-environment-variables
-//
-process.stdout.write(
-  JSON.stringify(
-    {
-      version: require('../package.json').version,
-      branch:
-        process.env.VERCEL_GITHUB_COMMIT_REF || process.env.BRANCH || 'dev',
-      commit:
-        process.env.VERCEL_GITHUB_COMMIT_SHA ||
-        process.env.COMMIT_REF ||
-        execSync(`git rev-parse HEAD`).toString().trim()
-    },
-    null,
-    '  '
+// https://github.com/ethereum-lists/chains
+const chainDataUrl = 'https://chainid.network/chains.json'
+
+axios(chainDataUrl).then((response) => {
+  // avoid having 2 nodes with the same chainId
+  const filteredData = response.data.filter(
+    (node) => node.chainId !== GEN_X_NETWORK_ID
   )
-)
+
+  // add custom networks metadata to the list
+  const fullNetworksMetadata = filteredData.concat(networksMetadata)
+
+  process.stdout.write(JSON.stringify(fullNetworksMetadata, null, '  '))
+})
