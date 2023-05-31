@@ -29,15 +29,17 @@ export default function Page({
   const isSearchPage = uri.startsWith('/search')
   const isAssetPage = uri.startsWith('/asset')
 
-  const childElements = title && !noPageHeader && (
+  const childElements = (
     <>
-      <PageHeader
-        title={isHome ? title : <>{title.slice(0, 400)}</>}
-        center={headerCenter}
-        description={description}
-        isHome={isHome}
-        showSearch={isHome}
-      />
+      {title && !noPageHeader && (
+        <PageHeader
+          title={isHome ? title : <>{title.slice(0, 400)}</>}
+          center={headerCenter}
+          description={description}
+          isHome={isHome}
+          showSearch={isHome}
+        />
+      )}
       {children}
     </>
   )
