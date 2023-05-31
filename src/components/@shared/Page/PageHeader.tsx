@@ -22,7 +22,8 @@ export default function PageHeader({
 }): ReactElement {
   const styleClasses = cx({
     header: true,
-    center
+    center,
+    isHome
   })
 
   return (
@@ -36,13 +37,6 @@ export default function PageHeader({
               </span>
             ))}
           </h1>
-          <a
-            href="https://delta-dao.com/"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <DeltaDAOLogo />
-          </a>
         </div>
       ) : (
         <h1 className={styles.title}>{title}</h1>

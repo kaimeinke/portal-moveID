@@ -3,6 +3,21 @@
   max-width: 50rem;
 }
 
+.isHome {
+  padding: calc(var(--spacer) * 3) 0;
+  background-image: var(--brand-hero-gradient);
+  max-width: none;
+}
+
+.isHome .title,
+.isHome .description {
+  color: var(--brand-white);
+}
+
+.isHome .header {
+  margin-top: 0;
+}
+
 .title {
   font-size: var(--font-size-h3);
   margin-top: 0;
