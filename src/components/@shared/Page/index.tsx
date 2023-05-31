@@ -29,14 +29,17 @@ export default function Page({
   const isSearchPage = uri.startsWith('/search')
   const isAssetPage = uri.startsWith('/asset')
 
-  const header = title && !noPageHeader && (
-    <PageHeader
-      title={isHome ? title : <>{title.slice(0, 400)}</>}
-      center={headerCenter}
-      description={description}
-      isHome={isHome}
-      showSearch={isHome}
-    />
+  const childElements = title && !noPageHeader && (
+    <>
+      <PageHeader
+        title={isHome ? title : <>{title.slice(0, 400)}</>}
+        center={headerCenter}
+        description={description}
+        isHome={isHome}
+        showSearch={isHome}
+      />
+      {children}
+    </>
   )
 
   return (
@@ -51,17 +54,7 @@ export default function Page({
         )}
         {isAssetPage && !allowExternalContent && <ExternalContentWarning />}
       </Container>
-      {isHome ? (
-        <>
-          {header}
-          <Container>{children}</Container>
-        </>
-      ) : (
-        <Container>
-          {header}
-          {children}
-        </Container>
-      )}
+      {isHome ? childElements : <Container>{childElements}</Container>}
     </>
   )
 }

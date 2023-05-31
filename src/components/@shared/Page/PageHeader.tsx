@@ -3,7 +3,6 @@ import classNames from 'classnames/bind'
 import styles from './PageHeader.module.css'
 import Markdown from '@shared/Markdown'
 import SearchBar from '@components/Header/SearchBar'
-import DeltaDAOLogo from '@images/deltaDAO_Logo_small_RGB_positiv.svg'
 
 const cx = classNames.bind(styles)
 
