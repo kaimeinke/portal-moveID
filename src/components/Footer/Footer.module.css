@@ -32,8 +32,11 @@
 .main svg {
   width: 15rem;
   height: 6rem !important;
-  margin-left: -0.7rem;
   margin-top: auto;
+}
+
+.main svg path {
+  fill: var(--brand-white);
 }
 
 .subtitle {
