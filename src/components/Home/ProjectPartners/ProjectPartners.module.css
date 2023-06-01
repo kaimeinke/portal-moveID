@@ -1,7 +1,7 @@
 .wrapper {
   margin: calc(var(--spacer) / 2) 0;
   padding: calc(var(--spacer) * 2) 0;
-  background-color: var(--color-primary);
+  background: var(--brand-hero-gradient);
 }
 
 .title {
