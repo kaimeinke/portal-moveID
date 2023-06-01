@@ -50,7 +50,7 @@
   /* Footer */
   --footer-background-color: var(--brand-grey);
   --footer-font-color: var(--brand-white);
-  --footer-font-color-highlight: var(--brand-cyan);
+  --footer-font-color-highlight: var(--color-highlight);
   --footer-link-category-font-color: var(--brand-white);
 
   /* Input elements */
