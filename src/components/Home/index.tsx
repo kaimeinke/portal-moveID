@@ -11,6 +11,7 @@ import TopTags from './TopTags'
 import HomeContent from './Content'
 import ProjectPartners from './ProjectPartners/ProjectPartners'
 import Container from '@components/@shared/atoms/Container'
+import FundedBy from './FundedBy/FundedBy'
 
 interface FeaturedSection {
   title: string
@@ -96,6 +97,7 @@ export default function HomePage(): ReactElement {
         <HomeContent />
       </Container>
       <ProjectPartners />
+      <FundedBy />
     </>
   )
 }
