@@ -16,15 +16,9 @@ export default function Footer(): ReactElement {
       <Container className={styles.container}>
         <div>
           <p className={styles.siteTitle}>{siteTitle}</p>
-          <a
-            href="https://delta-dao.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div className={styles.main}>
-              <BrandLogo />
-            </div>
-          </a>
+          <div className={styles.main}>
+            <BrandLogo />
+          </div>
         </div>
         <Links />
       </Container>
