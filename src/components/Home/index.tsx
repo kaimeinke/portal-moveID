@@ -6,12 +6,11 @@ import { SortTermOptions } from '../../@types/aquarius/SearchQuery'
 import SectionQueryResult from './SectionQueryResult'
 import styles from './index.module.css'
 import { useAddressConfig } from '@hooks/useAddressConfig'
-import TopSales from './TopSales'
-import TopTags from './TopTags'
 import HomeContent from './Content'
 import ProjectPartners from './ProjectPartners/ProjectPartners'
 import Container from '@components/@shared/atoms/Container'
 import FundedBy from './FundedBy/FundedBy'
+import PoweredBy from './PoweredBy'
 
 interface FeaturedSection {
   title: string
@@ -98,6 +97,7 @@ export default function HomePage(): ReactElement {
       </Container>
       <ProjectPartners />
       <FundedBy />
+      <PoweredBy />
     </>
   )
 }
