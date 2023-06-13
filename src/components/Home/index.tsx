@@ -6,9 +6,11 @@ import { SortTermOptions } from '../../@types/aquarius/SearchQuery'
 import SectionQueryResult from './SectionQueryResult'
 import styles from './index.module.css'
 import { useAddressConfig } from '@hooks/useAddressConfig'
-import TopSales from './TopSales'
-import TopTags from './TopTags'
 import HomeContent from './Content'
+import ProjectPartners from './ProjectPartners/ProjectPartners'
+import Container from '@components/@shared/atoms/Container'
+import FundedBy from './FundedBy/FundedBy'
+import PoweredBy from './PoweredBy'
 
 interface FeaturedSection {
   title: string
@@ -78,33 +80,24 @@ export default function HomePage(): ReactElement {
 
   return (
     <>
-      {hasFeaturedAssets() && (
-        <>
-          {queryFeatured.map((section, i) => (
-            <SectionQueryResult
-              key={`${section.title}-${i}`}
-              title={section.title}
-              query={section.query}
-            />
-          ))}
-          <AllAssetsButton />
-        </>
-      )}
-      <SectionQueryResult
-        title="Recently Published"
-        query={queryRecent}
-        action={<AllAssetsButton />}
-      />
-      <SectionQueryResult
-        title="Most Sales"
-        query={queryMostSales}
-        action={<AllAssetsButton />}
-      />
-
-      {/* <MostViews /> */}
-      <TopSales title="Publishers With Most Sales" />
-      <TopTags title="Top Tags By Sales" />
-      <HomeContent />
+      <Container>
+        {hasFeaturedAssets() && (
+          <>
+            {queryFeatured.map((section, i) => (
+              <SectionQueryResult
+                key={`${section.title}-${i}`}
+                title={section.title}
+                query={section.query}
+              />
+            ))}
+            <AllAssetsButton />
+          </>
+        )}
+        <HomeContent />
+      </Container>
+      <ProjectPartners />
+      <FundedBy />
+      <PoweredBy />
     </>
   )
 }

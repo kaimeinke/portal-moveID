@@ -3,7 +3,6 @@ import classNames from 'classnames/bind'
 import styles from './PageHeader.module.css'
 import Markdown from '@shared/Markdown'
 import SearchBar from '@components/Header/SearchBar'
-import DeltaDAOLogo from '@images/deltaDAO_Logo_small_RGB_positiv.svg'
 
 const cx = classNames.bind(styles)
 
@@ -22,7 +21,8 @@ export default function PageHeader({
 }): ReactElement {
   const styleClasses = cx({
     header: true,
-    center
+    center,
+    isHome
   })
 
   return (
@@ -36,13 +36,6 @@ export default function PageHeader({
               </span>
             ))}
           </h1>
-          <a
-            href="https://delta-dao.com/"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <DeltaDAOLogo />
-          </a>
         </div>
       ) : (
         <h1 className={styles.title}>{title}</h1>

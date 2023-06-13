@@ -7,11 +7,21 @@
   --brand-cyan: #46daff;
   --brand-purple: #7300f3;
   --brand-violet: #b900ff;
+  --brand-green: #05b050;
 
   --brand-gradient: linear-gradient(
     to right bottom,
     var(--brand-cyan),
     var(--brand-blue-light)
+  );
+
+  --brand-hero-gradient: linear-gradient(
+    120deg,
+    #961cd4,
+    #5700b9 26%,
+    #1110c4 50%,
+    #2f56ff 71%,
+    #40b6ff 98%
   );
 
   --brand-grey: #2b2e3b;

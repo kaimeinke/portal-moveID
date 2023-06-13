@@ -1,17 +1,13 @@
 {
-  "siteTitle": "Pontus-X - Gaia-X Web3 Ecosystem",
-  "siteTagline": "A platform to find, publish and consume Service Offerings in the Gaia-X Test Network.",
-  "siteUrl": "https://portal.minimal-gaia-x.eu",
+  "siteTitle": "moveID Gaia-X Portal",
+  "siteTagline": "moveID aims to develop a decentralized digital mobility identity infrastructure for Europe.",
+  "siteUrl": "https://moveid.portal.minimal-gaia-x.eu",
   "siteImage": "/share.png",
   "copyright": "All Rights Reserved. Powered by [Ocean Protocol](https://oceanprotocol.com). Built by [deltaDAO](https://delta-dao.com).",
   "menu": [
     {
       "name": "Catalogue",
       "link": "/search?sort=nft.created&sortOrder=desc"
-    },
-    {
-      "name": "Publish",
-      "link": "/publish/1"
     },
     {
       "name": "Verify",
@@ -91,10 +87,6 @@
           {
             "name": "Profile",
             "link": "/profile"
-          },
-          {
-            "name": "Publish",
-            "link": "/publish/1"
           },
           {
             "name": "Verify",
