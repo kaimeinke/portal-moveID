@@ -3,7 +3,7 @@
   "description": "moveID Gaia-X Portal",
   "version": "1.0.0",
   "license": "Apache-2.0",
-  "homepage": "https://moveid.pontus-x.eu",
+  "homepage": "https://portal.moveid.eu",
   "scripts": {
     "start": "npm run pregenerate && next dev -p 8000",
     "build": "npm run pregenerate && next build",
