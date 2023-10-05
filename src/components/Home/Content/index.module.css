@@ -84,22 +84,3 @@
   fill: var(--brand-green);
   transition: all 0.3s ease;
 }
-
-@media screen and (min-width: 54rem) {
-  .paragraph {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .paragraph.mirror {
-    flex-direction: row-reverse;
-  }
-  .content {
-    padding: var(--spacer);
-    padding-right: 0;
-  }
-  .mirror .content {
-    padding: var(--spacer);
-    padding-left: 0;
-  }
-}
