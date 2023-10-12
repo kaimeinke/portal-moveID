@@ -23,6 +23,7 @@
   --nft-refresh-icon-fill: var(--brand-white);
   --nft-placeholder-background: var(--brand-hero-gradient);
   --badge-background-color: var(--color-primary);
+  --nft-placeholder-background: var(--brand-gradient);
 
   /* Menubar */
   --menu-logo-color: var(--color-primary);
