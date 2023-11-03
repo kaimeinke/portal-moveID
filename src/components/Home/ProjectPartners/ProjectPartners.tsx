@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react'
+import { ReactElement } from 'react'
 import styles from './ProjectPartners.module.css'
 import Carousel from '@components/@shared/Carousel/Carousel'
 import Container from '@components/@shared/atoms/Container'
