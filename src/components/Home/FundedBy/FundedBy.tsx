@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react'
+import { ReactElement } from 'react'
 import styles from './FundedBy.module.css'
 import Container from '@components/@shared/atoms/Container'
 
