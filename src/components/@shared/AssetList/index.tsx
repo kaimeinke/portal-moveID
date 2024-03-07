@@ -47,8 +47,10 @@ const tableColumns: TableOceanColumn<AssetExtended>[] = [
       return (
         <AssetType
           className={styles.typeLabel}
-          type={metadata.additionalInformation.saas ? 'saas' : metadata.type}
-          accessType={metadata.additionalInformation.saas ? 'saas' : accessType}
+          type={metadata.additionalInformation?.saas ? 'saas' : metadata.type}
+          accessType={
+            metadata.additionalInformation?.saas ? 'saas' : accessType
+          }
         />
       )
     },
