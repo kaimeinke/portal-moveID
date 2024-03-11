@@ -1,15 +1,15 @@
+import { LogLevel, LoggerInstance } from '@oceanprotocol/lib'
+import { isBrowser } from '@utils/index'
 import {
-  createContext,
-  useContext,
   ReactElement,
   ReactNode,
-  useState,
-  useEffect
+  createContext,
+  useContext,
+  useEffect,
+  useState
 } from 'react'
-import { LoggerInstance, LogLevel } from '@oceanprotocol/lib'
-import { isBrowser } from '@utils/index'
-import { useMarketMetadata } from './MarketMetadata'
 import { AUTOMATION_MODES } from './Automation/AutomationProvider'
+import { useMarketMetadata } from './MarketMetadata'
 
 interface UserPreferencesValue {
   debug: boolean
@@ -183,7 +183,7 @@ function UserPreferencesProvider({
           setAutomationWalletJSON: setAutomationWallet,
           automationWalletMode,
           setAutomationWalletMode
-        } as UserPreferencesValue
+        } satisfies UserPreferencesValue
       }
     >
       {children}

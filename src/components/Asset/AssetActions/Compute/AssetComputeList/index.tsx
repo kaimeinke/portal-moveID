@@ -1,9 +1,9 @@
-import Dotdotdot from 'react-dotdotdot'
-import Link from 'next/link'
+import { AssetSelectionAsset } from '@shared/FormInput/InputElement/AssetSelection'
 import PriceUnit from '@shared/Price/PriceUnit'
 import Loader from '@shared/atoms/Loader'
+import Link from 'next/link'
+import Dotdotdot from 'react-dotdotdot'
 import styles from './index.module.css'
-import { AssetSelectionAsset } from '@shared/FormInput/InputElement/AssetSelection'
 
 function Empty() {
   return <div className={styles.empty}>No assets found.</div>
@@ -40,6 +40,7 @@ export default function AssetComputeSelection({
               </div>
               <PriceUnit
                 price={Number(asset.price)}
+                symbol={asset.tokenSymbol}
                 size="small"
                 className={styles.price}
               />
