@@ -5,13 +5,25 @@ module.exports = {
   },
   featured: [
     {
+      title: 'Vehicle Data - Road Condition Monitoring',
+      assets: [
+        'did:op:508cfde261c90a0919c8e9827d556785192fab6f7b3b979c39b731bc7952f663', // HH North 15
+        'did:op:311c0bb60154e0dd9b864b3e5ce94c953fb7626d194e0492093f63a74cadf342', // HH North 14
+        'did:op:926098d058b017dcf3736370f3c3d77e6046ca6622af111229accf5f9c83e308', // Road Damage Detection Algorithm (Yolo v5)
+        'did:op:65ebe90be37dc132b5d58a8fae824d77faf9ef0f550d8444d0c01642970e3357', // SH North 13
+        'did:op:23f930ac1f6db98a79956571843bcc37196f5829efb7a1059cd4819f39cee23f', // SH North 12
+        'did:op:34e1ecb956831d7d62a00a934ee7c8540732738b1a66e06d94fe791eae579c76', // SH North 10
+        'did:op:b35f8296a1f9afa24fd794154802c8a400f341651c02b0bc913710a944b35aba', // SH North 11
+        'did:op:1e3c73e8d889cf2d4e0b69e0a038b13a66a0474660c6f2126a2fead4d10fa982' // Hamburg City Road Condition SaaS
+      ]
+    },
+    {
       title: 'Smart Mobility, Automotive',
       assets: [
         'did:op:b4be1f60c197890bfebc041e66731a2c6f98f520169a9f38173c19e29353b4d0', // moveID Wolfsburg Smart Garage EV Charging Status Data for Compute
         'did:op:684af1448fd5c99d5e4839da4f6e206056be74defd206a29307cc68ea464557f', // Smart EV Garage Status Aggregation
         'did:op:99fda160c29d15c4c9d2216033da9594f9932176229f77cfadf53dbf12cc4dc8', // moveID Wolfsburg Smart Parking and Charging Garage Status
         'did:op:b4be1f60c197890bfebc041e66731a2c6f98f520169a9f38173c19e29353b4d0', // Road Damage Detection (FREE)
-        'did:op:2e148b5c1ff12590c13bc018100743f0253f22f49cbaf7876612b2417f961789', // 01 - Vehicle Data Collection (EUR)
         'did:op:87b0133e6979419919d8526e3bac2604bd8b04d0fca43e21fb3fde67497a7860', // Traffic Object Annotation for Highway Image Data
         'did:op:f3e162d564b5a925edaf2ce9d8cb3f52347f63376f337b4c6b910d22d93f02bc', // Morning Rush Intensities / INWEVA Spitsen 2020 (RWS)
         'did:op:8c2cc9d84e76c14fdf3c833f5dd8fbeec7748ec7ec21511434fc52f30153101a' // Traffic Data for Object Annotation (RWS)
